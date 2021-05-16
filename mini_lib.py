@@ -267,3 +267,58 @@ def remove_old_files(*args):
 
 
 logger = logging_ini("debug")
+
+
+# @add_some_trys
+# def get_http(input_url, proxy_enable, url, proxy_path=r'work_files\input\proxy.txt', http_try_max=3, cookies=''):
+#     """ Get запрос
+
+#     input_url - ссылка для запроса,
+#     proxy_enable - использовать прокси True False,
+#     url - хост ссылка/родительская (для логирования),
+#     proxy_path - путь к файлу с прокси,
+#     http_try_max - число попыток пройти по ссылке,
+#     cookies - кукисы для запроса"""
+
+#     logger.debug('Start get')
+#     if proxy_enable:
+#         proxy = get_proxy(proxy_path)
+#         proxies = {"http": "http://" + proxy}
+#     else:
+#         proxies = {}
+#     logger.debug(proxies)
+#     ua = get_ua()
+#     headers = {'user-agent': "'" + ua + "'"}
+
+#     if cookies == "":
+#         response = requests.get(input_url, headers=headers, proxies=proxies)
+#     else:
+#         response = requests.get(input_url, headers=headers, proxies=proxies, cookies=cookies)
+#     return response
+
+# @add_some_trys
+# def post_http(input_url, proxy_enable, url, proxy_path=r'work_files\input\proxy.txt', http_try_max=3, cookies='', data):
+#     """ Get запрос
+
+#     input_url - ссылка для запроса,
+#     proxy_enable - использовать прокси True False,
+#     url - хост ссылка/родительская (для логирования),
+#     proxy_path - путь к файлу с прокси,
+#     http_try_max - число попыток пройти по ссылке,
+#     cookies - кукисы для запроса"""
+
+#     logger.debug('Start post')
+#     if proxy_enable:
+#         proxy = get_proxy(proxy_path)
+#         proxies = {"http": "http://" + proxy}
+#     else:
+#         proxies = {}
+#     logger.debug(proxies)
+#     ua = get_ua()
+#     headers = {'user-agent': "'" + ua + "'"}
+
+#     if cookies == "":
+#         response = requests.get(input_url, headers=headers, proxies=proxies, data=data)
+#     else:
+#         response = requests.get(input_url, headers=headers, proxies=proxies, cookies=cookies, data=data)
+#     return response
