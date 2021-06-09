@@ -134,7 +134,7 @@ def send_fttp(file_path, ftp_path, file_type='TXT', serv='products.shping.com', 
 
     fb = open(r'work_files\output\ftp_res.txt', 'w')
     for item in data:
-        f.write(str(item) + '\n')
+        fb.write(str(item) + '\n')
     fb.close()
 
 
@@ -318,7 +318,7 @@ logger = logging_ini("debug")
 #     headers = {'user-agent': "'" + ua + "'"}
 
 #     if cookies == "":
-#         response = requests.get(input_url, headers=headers, proxies=proxies, data=data)
+#         response = requests.post(input_url, headers=headers, proxies=proxies, data=data)
 #     else:
-#         response = requests.get(input_url, headers=headers, proxies=proxies, cookies=cookies, data=data)
+#         response = requests.post(input_url, headers=headers, proxies=proxies, cookies=cookies, data=data)
 #     return response
